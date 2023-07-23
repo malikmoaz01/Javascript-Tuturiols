@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log("This is tutorial 59")
+    // symbol ko introduce krne kiu wja ksi cheez ko unique bnana k ha
+    // Symbols is unique type prmitive type string ki trah 
+    const sym1 = Symbol('My identifier');
+    const sym2 = Symbol('My identifier');
+    // console.log('Symbol is ', sym1);
+    // console.log('Type of Symbol is ', typeof sym1);
+    console.log(sym1 === sym2);
+    // {******************************************
+    // it will show(sym1 === sym2) false laikin nich a b me equal ha(this is) ye true krege yhi main diffference h iska 
+    // ******************} 
+    const a = "this is";
+    const b = "this is";
+
+    console.log(a === b);
+    console.log(null === null);
+    console.log(undefined === undefined);
+
+    const k1 = Symbol('identifier for k1');
+    const k2 = Symbol('for k2');
+
+    myObj = {};
+    myObj[k1] = "Harry";
+    myObj[k2] = "Rohan";
+    myObj["name"] = "Good boy"
+    myObj[4] = "Good int"
+
+
+    console.log(myObj); // isme harry rohan dono ayega
+    console.log(myObj[k1]); // laikin yha Sirf harry ayega
+    console.log(myObj[k2]);
+    console.log(myObj.k2); //isko hum is wja se ni krskte kyuke string me ye search krega !! ALERT !!: cannot do this to get Rohan because it is same as myObj["k2"]
+
+
+    // Symbols are ignored in for in loop 
+    // for in loops m symbols nahi ati 
+    for (key in myObj) {
+        console.log(key, myObj[key])
+    }
+    // convert obj into string in symbols
+    console.log(JSON.stringify(myObj));
+
+</script>
+
+</html>

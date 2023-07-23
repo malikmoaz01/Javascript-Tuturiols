@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" id="btn" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+     console.log('This is tut 18');
+    // ****************************************************************************
+    //{ iska mtlb click krke thanks khna isi tarah double click mouse down or prvent default ka function is wjah se use kiya hain ke jub hum submit krte the tou ase huta tha ke page not loading isko use krte hainm bypass ke liye 
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click', func1);
+    // btn.addEventListener('mousedown', func3);
+    // btn.addEventListener('dblclick', func2);
+
+    // function func1(e) {
+    //     console.log("Thanks", e);
+    //     e.preventDefault();
+    // }
+
+// function func2(e) {
+//     console.log("Thanks its a double click", e);
+//     e.preventDefault();
+// }
+
+// function func3(e) {
+//     console.log("Thanks its a mouse down ", e);
+//     e.preventDefault();
+// }
+// }}}}****************************************************************************
+// {
+    // iska mtlb ase class no me hum ne ik even add krna hain jiska mtln ye hain ke jitna bar os clas ke element pr le kr jaye tou os pr lick hukr console pr show hu or mouse leave ka mtlb ye ke jab mouse htaye tu yeh aye(you entered no)
+// document.querySelector('.no').addEventListener('mouseenter', function(){
+
+
+//     console.log('You entered no')
+// })
+
+// document.querySelector('.no').addEventListener('mouseleave', function(){
+//     console.log('You exited no')
+// })
+// ********************************************************************************
+
+// { 
+    // isme ye huwa ke hum kitni bar mouse ko hilaye ge container ki class sath me humme offset x or y b btaye ga or je ye background clr (rgb) hain iska jab le ke jaye tu clr change huta rhe rgb ke hawale se //
+// document.querySelector('.container').addEventListener('mousemove', function(e){
+//     console.log(e.offsetX, e.offsetY);
+//     document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetX},154)`;
+//     console.log('You triggered mouse move event')
+// })
+</script>
+
+</html>

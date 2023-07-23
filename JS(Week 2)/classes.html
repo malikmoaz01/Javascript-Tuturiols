@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    console.log("hello");
+    class Employee {
+        constructor(givenname, givenexperience, givensalary) {
+            this.name = givenname;
+            this.experience = givenexperience;
+            this.salary = givensalary;
+        }
+        slogan() {
+            return `i am ${this.name}.that company is very good`;
+        }
+        joiningyear() {
+            return 2020 - this.experience;
+        }
+        static add(a, b) {
+            return a + b;
+        }
+    }
+
+    class Programmer extends Employee {
+        constructor(givenName, givenExperience, givensalary, language, github) {
+            super(givenName, givenExperience, givensalary);
+            this.language = language;
+            this.github = github;
+        }
+
+        favoriteLanguage() {
+            if (this.language == 'python') {
+                return 'Python';
+            }
+            else {
+                return 'JavaScript';
+            }
+        }
+
+        static multiply(a, b) {
+            return a * b;
+        }
+    }
+
+    moaz = new Employee("Harry", 58, 100000);
+    console.log(moaz.joiningyear());
+    console.log(Employee.add(34, 5))
+
+    rohan = new Programmer('moaz', 23, 23000, "css", 'mlkmoaz01')
+    console.log(rohan);
+    console.log(rohan.favoriteLanguage());
+    console.log(Programmer.multiply(7, 5));
+</script>
+
+</html>

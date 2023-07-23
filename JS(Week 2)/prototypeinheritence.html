@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    console.log("hello");
+    // humne ik object bnaya(proto name ka ) jisme 2 function liye ik me slogqn or dore me kha newname change krke lena ha humme ****iske bad harry name  se ik or function bnaya proto ke name se or phir humne name change krne ke liye function lgaya or phir prototype me name ko change kya 
+    //***********************************************************************************
+    const proto = {
+        slogan: function () {
+            return `This company is the best`;
+        },
+        changeName: function (newName) {
+            this.name = newName
+        }
+    }
+
+    // This creates harry object
+    let harry = Object.create(proto);
+    harry.name = "harry";
+    harry.role = "Programmer";
+    // harry.changeName("Harry2")
+    // console.log(harry)
+
+    // This also creates harry object
+    const harry1 = Object.create(proto, {
+        name: { value: "harry", writable: true }, // writable true se kre tou name change hurha tha otherwise ni hurha tha
+        role: { value: "Programmer" },
+    });
+    harry1.changeName("Harry2")
+    // console.log(harry1)
+    // **********************************************************************************
+    //  or yha hamara maqsad ye tha employee se chalate huwe(mean inherit krke programmer bnaya ) prototype ko ik programmer bnana 
+    // Employee constructor
+    function Employee(name, salary, experience) {
+        this.name = name;
+        this.salary = salary;
+        this.experience = experience;
+    }
+
+    // Slogan
+    Employee.prototype.slogan = function () {
+        return `This company is the best. Regards, ${this.name}`;
+    }
+
+    // Create an object from this constructor now
+    let harryObj = new Employee("Harry", 345099, 87);
+    console.log(harryObj.slogan())
+
+    // Programmer
+    function Programmer(name, salary, experience, language) {
+        Employee.call(this, name, salary, experience);
+        this.language = language;
+    }
+
+    // Inherit the prototype
+    Programmer.prototype = Object.create(Employee.prototype);
+
+    // Manually set the constructor
+    Programmer.prototype.constructor = Programmer;
+
+    let rohan = new Programmer("Rohan", 2, 0, "Javascript");
+    console.log(rohan);
+
+
+
+</script>
+
+</html>

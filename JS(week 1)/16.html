@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Malik Moaz</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithMalik Moaz.com">Go to Code With Malik Moaz</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    console.log('this');
+    // Attribute ka mtlb class id or div ke andar ju hu wo huta hain
+    // { iska mtlb be niche wale ki tarah hain ik child append krdo element mein mean ye bhi 5th huga
+    let element = document.createElement('li');
+    let text = document.createTextNode('I am a text node');
+    element.appendChild(text)
+    // }
+    // ****************************************************************************
+    //  ye niche bracket ka matlb ye ha ke humne ik new child ko append kya jiska name (hello this is created by malik moaz) tha 4 phle or 5th ye hugya *** or 2nd thing ye ke agr hum akela innertext karte tu bold na huta inner html se bold b hujaye ga.
+    // {
+
+    // Add a class name & id name to the li element
+    element.className = 'childul';
+    element.id = 'createdLi';
+    element.setAttribute('title', 'mytitle');
+    // setAttribute ka matlb ye ha ke div ke andar new attribute karna as it is (title = "mytitle")
+    // element.innerText = '<b>Hello this is created by Malik Moaz</b>';
+    // element.innerHTML = '<b>Hello this is created by Malik Moaz</b>';
+
+    // ********************************
+    // Append child ka mtlb ye hain ke ul ke andar ik or child dal dena 
+    let ul = document.querySelector('ul.this');
+    ul.appendChild(element);
+    // console.log(ul)
+    // console.log(element)
+
+    // }
+    // ****************************************************************************
+    //{ 
+    // isme hum phle create krke phir replace krege or element ko replace krege
+    let elem2 = document.createElement('h3');
+    elem2.id = 'elem2';
+    elem2.className = 'elem2';
+    let tnode = document.createTextNode('This is a created node for elem2');
+    elem2.appendChild(tnode);
+
+    element.replaceWith(elem2);
+    // }
+    // *****************************
+    // {
+    // isme ase huga hum replace rege phle element isse ye huwa ke this ki jag this is my text node agya opr wala.
+    let myul = document.getElementById('myul');
+    myul.replaceChild(element, document.getElementById('fui'));
+    // replaceChilde(new,old); that is a way to write replace ::
+    // }
+    // *********************
+    myul.removeChild(document.getElementById('lui'));
+    // isse child ko remove kya gya mean last wala remove huwa huga
+    // ********************
+    let pr = elem2.hasAttribute('href');
+    //has attribute ka mtlb ye ke agr isme iski id ya clss hui tu true otherwise false
+    // ***********************
+    elem2.removeAttribute('id');
+    elem2.setAttribute('title', 'myelem2title');
+    // remove attriute ka mtlb ye hain id ko isne remove krdya or set ka mtlb new bna dya 
+    console.log(elem2, pr);
+    //  quick quiz
+    // create a heading element with text as "Go to CodeWithMalik Moaz" and create an a tag outside it with href = "https://www.codewithharry.com"
+
+</script>
+
+</html>

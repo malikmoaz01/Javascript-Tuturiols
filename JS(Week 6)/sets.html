@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log('This is tutorial 58');
+    // set imp points
+    // 1.add values in set 
+    // 2.check value(has)
+    // 3.remve element from set
+    // 4.iterate(show krna ya duhrana) the set with for of & for each loop
+
+    // set ko hum is wja se use krte hain jitni b sam cheeze hu mean 10 bar agr this hutu tu sirf ik bar hi ayega ik cheez ik shakhs ke luiye is ka scene kuch aesa hain      
+    // Set stores unique values
+    const mySet = new Set();  // Initialize an empty set
+    console.log('The set looks like :', mySet);
+
+    // Adding values to this set(hum iske kuch b dal skte h)
+    mySet.add('this');
+    mySet.add('My name');
+    mySet.add('this'); // is br this ko accept ni krega kyuke this aCHUKA H  phle hi ab add ni huskta 
+    mySet.add('that');
+    mySet.add(34);
+    mySet.add(true);
+    mySet.add(false);
+    mySet.add('that2');
+    console.log('The set looks like this now:', mySet);
+
+    // Use a constructor to initialize the set
+    let mySet2 = new Set([1, 45, 'this', false, { a: 4, b: 8 }, 'this']);
+    console.log('New set:', mySet2);
+
+
+    console.log(mySet.size); // Get the size of the set
+    // iska mtlb ye ke iske pas 346 ha kya agr ha tu isko true print krdu otherwise false krdu isko 
+    console.log(mySet.has(346)); // Check whether set has 346 or not
+
+
+    // isme hum set mese value ko kese del krskte hain?
+    console.log('Before removal', mySet.has('that2'));
+    mySet.delete('that2'); // Remove an element from the set
+    console.log('After removal', mySet.has('that2'));
+
+    // 
+    // Iterating a set
+    // for(let item of mySet){
+    //     console.log('Item is  :', item );
+    // }
+
+    mySet.forEach((item) => {
+        console.log('Item is  :', item);
+    })
+
+// Quiz: Can you use Array.from(mySet) to convert set into an array?
+</script>
+
+</html>

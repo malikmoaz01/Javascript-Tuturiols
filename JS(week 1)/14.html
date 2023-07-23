@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this</h1>
+    <div class="container red" id="myfirst">child1</div>
+    <div class="container yellow" id="mysecond">child2</div>
+    <div class="container blue" id="my3rd">child3</div>
+    <div class="container orrange" id="my4th">child4</div>
+    <script>
+        let element = document.getElementById('myfirst');
+        // class pta krne ke liye
+        // element = element.className;
+        // CHILD NODES & PARENT NODES 
+        // element = element.childNodes;
+        // element = element.parentNode;
+
+        // **************************************************************** 
+        // we can use css in javascript
+        // element.style.color = 'red';
+        // as it is backgroundcolor or many properties we can use google
+        // ****************************************************************
+        // innertext me us ki jaagh ajayega and innerhtml me tag b use krskte hain 
+        // element.innerText = "malik moaz";
+        // element.innerHTML = "<i>malik </i>
+        // console.log(element.innertext);
+        // **************************************************************** 
+        // QUERY SELECTOR (isme phli hi chiz milti ha bs)
+        element.style.color = 'red';
+        element.innerText = "malik moaz";
+        element.innerHTML = "<i>malik </i>"
+        let a = document.querySelector("#myfirst");
+        let b = document.querySelector(".container");
+        let c = document.querySelector("i");
+        let d = document.querySelector("h1");
+        let e = document.querySelector("div");
+        d.style.color = 'green'
+        // let b= document.querySelector(".container "); or isme jitni marzi classes hu par phli hi milegi apko
+        // console.log(e);
+        // ****************************************************
+        // MULTI ELEMENT SELECTOR
+        let z = document.getElementsByClassName('red');
+        z = document.getElementsByClassName('container');
+        y = document.getElementsByTagName('div');
+        console.log(z[0].getElementsByClassName('red'));
+        // **********************
+        // for & for each loop
+        for (let index = 0; index < y.length; index++) {
+            const element = y[index];
+            console.log(element);
+            element.style.color ='green';
+            
+        }
+        // Array.from(y).forEach(element => {
+        //     console.log(element);
+        //     element.style.color ='black';
+        // });
+
+    </script>
+</body>
+
+</html>

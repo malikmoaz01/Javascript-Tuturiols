@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ajax tuturiol</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>XML AJAX TUTURIOL</h1>
+    <button type="button" id="fetchbtn" class="btn btn-primary">Fetch Data</button>
+    <button type="button" id="popBtn" class="btn btn-secondary">Populate</button>
+
+
+    <div class="container">
+        <h1>emloyee list</h1>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    // ********************
+    // iski story ye hain ke ik file hum ne txt ki bnai jisme ju humne likha tu jab hum fetch buttob ko dubaye ge tu ye console log or file txt me ju likha wo sub kuch ayega  or bina reload kye huwe
+    // {
+    // let fetchbtn = document.getElementById('fetchbtn');
+    // fetchbtn.addEventListener('click', buttonClickHandler);
+    // function buttonClickHandler() {
+    //     console.log('click fetch button');
+    //     // inherit xml object
+    //     const xhr = new XMLHttpRequest();
+    //     // xml open 
+    //     xhr.open("GET",'malik.txt',true);
+    //     // what to do on progress
+    //     xhr.onprogress = function(){
+    //         console.log('on progress');
+    //     }
+    //     // what to do when response is ready 
+    //     xhr.onload = function(){
+    //         console.log(this.responseText);
+    //     }
+    //     // send the request
+    //     xhr.send();
+    // }
+    // }
+    let fetchbtn = document.getElementById('fetchbtn');
+    fetchbtn.addEventListener('click', buttonClickHandler);
+    function buttonClickHandler() {
+        console.log('click fetch button');
+        // inherit xml object
+        const xhr = new XMLHttpRequest();
+        // // xml open 
+        // // xml open 
+        // xhr.open("GET",'https://jsonplaceholder.typicode.com/todos/1',false); // isme false mat use kre agr use krege tou synchronus programming me ajaye ga tou request ye block krede ga.
+        // xml post request
+        xhr.getResponseHeader('Content-type', 'application/json');
+        // response hader ka mtlb ye hain ke me response me hi bhj rha hu apne form ke data ko url me
+        xhr.onprogress = function () {
+            console.log('on progress');
+        }
+        // ready state hain yeh 0 se 5 huti hain yeh 0(unsent) 1(opened) 2(headers_recieved) 3(loading) 4 (done)
+        // xhr.onreadystatechange = function(){
+        //    console.log('ready state si',xhr.readyState);
+        // }
+        // what to do when response is ready 
+        xhr.onload = function () {
+            if (this.status == 200) {
+                console.log(this.responseText);
+            }
+            else {
+                console.error('some error occured ');
+            }
+        }
+        params = `{"name":"test","salary":"123","age":"23"}`;
+        // send the request
+        xhr.send(params);
+    }
+
+    let popBtn = document.getElementById('popBtn');
+    popBtn.addEventListener('click', popHandler);
+
+    function popHandler() {
+        console.log('You have clicked the pop handler');
+
+        // Instantiate an xhr object
+        const xhr = new XMLHttpRequest();
+
+        // Open the object
+        xhr.open('GET', 'http://dummy.restapiexample.com/api/v1/employees', true);
+
+
+        // What to do when response is ready
+        xhr.onload = function () {
+            if (this.status === 200) {
+                let obj = JSON.parse(this.responseText);
+                console.log(obj);
+                let list = document.getElementById('list');
+                str = "";
+                for (key in obj) {
+                    str += `<li>${obj[key].employee_name} </li>`;
+                }
+                list.innerHTML = str;
+            }
+            else {
+                console.log("Some error occured")
+            }
+        }
+
+        // send the request
+        xhr.send();
+        console.log("We are done fetching employees!");
+
+    }
+</script>
+
+</html>

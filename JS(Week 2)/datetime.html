@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    console.log('malik');
+    let today = new Date(); //today date
+    // console.log( today);
+    // console.log(typeof today); typeof object ayegqa bcz primitigve data type hain yeh 
+    // we  will write this way month/day/year if we write 13 on first it will be invalid 
+    let otherDate = new Date('1/10/2002 04:54:08');
+    // otherDate = new Date('June 13 1976');
+    console.log(otherDate);
+    let a;
+    a = otherDate.getDay(); // iska functin aese uta hain ke agr thursday tha os din tou ase count huga (0 sunday 1 monday 2 tuesday 3 wed 4 thurs)
+     a = otherDate.getDate(); // iska function kitne din hugye ik month ke bad mean opr 10 jan hain tou 10 din hugye hain
+    //  ********************
+    //  get minutes hours etc ka mtlb kitna time hain ju date hain pichle or isme yad rakhe hain idhr 0 se counting shuru huti hain or idhr get ke function 11 month hut hain 0 se 11 tak  
+    a = otherDate.getMinutes();
+    a = otherDate.getSeconds();
+    a = otherDate.getHours();
+    a = otherDate.getFullYear();
+    a = otherDate.getMilliseconds();
+    a = otherDate.getTime(); // isme aj ki date ke sath reload kre tu time change huta jayega or is function me time seconds me ayega
+    otherDate.setMonth(01);
+    console.log(otherDate); // or idhr 10 feb AJAYEGA KYUKE humne change ki hain date idhr or hum dekh skte hain ase bi  or isme even minutes or secs tak krskte hain
+    
+
+
+    
+</script>
+
+</html>

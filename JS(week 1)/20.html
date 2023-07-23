@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    console.log('this');
+    let arrayy = ['onion', 'banana', 'mango']
+    // { isme ye huwa hain ke local storage(console ke age storage huti jisme 2 pair key or value hute hain niche jese likha hain name key me stor hujaye ga or malik value me) .clear ka function ka mtlb ye hai ke local storage ko clear krna 
+    // add a key value pair inside local storage  
+    localStorage.setItem('Name', 'Malik');
+    localStorage.setItem('Name2', 'Moaz');
+    localStorage.setItem('sabzi', JSON.stringify(arrayy))
+    // JSON or string ka function ye ha as it is store krna or ye functions na kgate tu ye as it string me convert hujata yeh
+    localStorage
+    // clear storage
+    // localStorage.clear();
+
+    // clear a particular item 
+    localStorage.removeItem('Name');
+
+    // Retrived an item from local storage
+    let namee = localStorage.getItem('Name2');
+    // JSON.parse console me array me convert krne ke liye huta hain while JSON.stringify storage me array ki tarah store huta hain 
+    namee = JSON.parse(localStorage.getItem('sabzi'));
+    console.log(namee);
+    // }
+//    sessionStorage.setItem('sessionStorageName', 'Malik');
+//    sessionStorage.setItem('sessionStorageName2', 'Moaz');
+//    sessionStorage.setItem('sessionStoragesabzi',JSON.stringify(arrayy))
+// ********************************************************************************
+//  local storage ko jab marzi khule website ko wo save rhti hain jab ke agr hum session storage me browser ko dubara open kre tou del huchuki huti hian subhi function local storage ke session storage ke same  hain clear b as it is isi local  storage ki tarahhuta hain 
+</script>
+
+</html>

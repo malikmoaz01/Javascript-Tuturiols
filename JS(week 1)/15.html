@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    console.log('Welcome');
+
+    let cont = document.querySelector('.no');
+    cont = document.querySelector('.container');
+    let nodeName = cont.childNodes[1].nodeName;
+    //  13 ki node list thi or os mese 1st wali chahye apr wale ka yeh matlab hain
+    let nodeType = cont.childNodes[1].nodeType;
+    // or niche yeh node type ke mutabiq phli eement tou element ayega
+    // console.log(nodeName)
+    // console.log(nodeType)
+    // Node types
+    // 1. Element
+    // 2. Attribute
+    // 3. Text Node
+    // 8. Comment
+    // 9. document
+    // 10. docType
+
+    // console.log(cont.childNodes); same as below elements show krwana
+    // console.log(cont.children); children ka mtlb elements ke hain
+
+    // let container = document.querySelector('div.container');
+    // iska mtlb ye ke div jis ki class container hain qwo show krwa du 
+
+    // console.log(container.children[1].children[0].children);
+    // iska mtlb ye ha ke ju iske children men ul ke this is my last dream wo show huge
+
+    // ******************************************
+
+    // console.log(container.firstChild); mean node list me phla 
+    // console.log(container.firstElementChild); iska mtlb ju element phla huga mean heading
+    // ******************************************
+    // same isi tarah last walaa ke scene ha jese first hain
+    // console.log(container.lastChild);
+    // console.log(container.lastElementChild);
+    // ******************************************
+    // console.log(container.children);
+    // console.log(container.childElementCount); 
+    // Count of child elements mean div,heading ye sub kuch kitne hain 
+    // ******************************************
+
+    console.log(container.firstElementChild.parentNode);
+    //  sarbra mean ye ke iska div huga bcz div me ye kuch ata hain sara ka sara
+    console.log(container.firstElementChild.nextSibling); 
+    console.log(container.firstElementChild.nextElementSibling);
+    // iska agla element knsa huga yani div ke bad so on
+    console.log(container.firstElementChild.nextElementSibling.nextElementSibling);
+
+
+</script>
+
+</html>
