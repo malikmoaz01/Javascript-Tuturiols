@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome to Code With Malik</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithMalik.com">Go to Code With Malik</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+    <div class="container">
+        <h1>Student list</h1>
+
+        <ul id="students"></ul>
+
+        <button id="myBtn" class="btn btn-primary">Your Button</button>
+        <button class="btn btn-primary">Fetch Data</button>
+        <div id="content"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    //   regular expresion is used for matches to another word
+    console.log("This is tutorial 46");
+
+    let reg = /harry/; // This is a regular expression literal in js
+    // reg = /harry/g; // g means global
+    // global ka mtlb ye hain ke har jagah check kru or btao harry s me kha kha hain
+    // // reg = /harry/i; // i means case insensitive (isme agr harry me capital ya small world b match huga tu b dikh du)
+
+    // console.log(reg);
+    // console.log(reg.source); source ka mtlb oske andar(reg) ka content
+
+    let s = "This is great code with harry and also harry bhai";
+    // Functions to match expressions
+    // 1. exec() - This function will return an array for match or null for no match
+    let result = reg.exec(s); // is function me ye btaye ga ju reg me hain wo e ki kis line or index me match kr rha hain ya ni
+    // result = reg.exec(s);
+    // console.log(result);
+    // result = reg.exec(s); // dosri bar check krne ke liye dubvara phir lgaye ge
+    // console.log(result); ---> We can use multiple exec with global flag
+
+    // if (result) {
+    //     console.log(result);
+    //     console.log(result.input); // input dekhne ke liye
+    //     console.log(result.index); // sir index dekhne ke liye
+    // }
+
+
+    // **** agr ha tu true return krdu otherwise false return krdu
+    // 2. test() - Returns true or false 
+    let result2 = reg.test(s);
+    // console.log(result2); --> This will only print true if the "reg" is there in the string "s"
+    // *************** 
+    // isko hamesha ulta use krte ha sting me lane ke liye array me mtlb agr hum globally check kre tu isko array me convert krke dikhaye ga yeh
+    // 3. match() - It will return an array of results or null
+    // let result3 = reg.match(s) ---> This is wrong!!jese above likhA wese ni krna
+    let result3 = s.match(reg) // ---> This is right
+    // console.log(result3);
+    // ********************
+    // isme aesa huga ke agr match huwa tu index1 milega otherwise -1 milega 
+    // 4. search() - Returns index of first match else -1
+    // let result4 = reg.search(s) ---> This is wrong!!
+    let result4 = s.search(reg) // ---> This is right
+    // console.log(result4);
+    // replace krne ke liye harry ki jagah shubhum ajaye ga 
+    // 5. replace() - Returns new replaced string with all the replacements (if no flag is given, first match will be replaced)
+
+    let result5 = s.replace(reg, 'SHUBHAM');
+    console.log(result5);
+
+
+</script>
+
+</html>

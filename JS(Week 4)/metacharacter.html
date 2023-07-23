@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome to Code With Malik</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithMalik.com">Go to Code With Malik</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+    <div class="container">
+        <h1>Student list</h1>
+
+        <ul id="students"></ul>
+
+        <button id="myBtn" class="btn btn-primary">Your Button</button>
+        <button class="btn btn-primary">Fetch Data</button>
+        <div id="content"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    console.log('This is tutorial 47');
+
+    let regex = /harrsdfgy/;
+    // Lets look into some metacharacter symbols
+    // (^) iska mtlb ye hain ke shuru pr lga ke agr ye (((((((((((shuru)))))) se match hurha ha tu show krwa du 
+    regex = /^harrdc/; // ^ means expression will match if string starts with
+     // (^) iska mtlb ye hain ke end pr lga ke agr ye ((((((((((end))))) se match hurha ha tu show krwa du
+    regex = /harry$/; // $ at the end of the string means "string ends with"
+    // *************difference between (.) & (*) in regular expresion
+     // (.) iska mtlb ye huta ha hum ye khte ha isme koi b (((((((((1))))))))) character askta hain or(hrry) ase osme ha tu match hujaye ga
+    // // (.) iska mtlb ye huta ha hum ye khte ha isme koi b (((((((((1 sa zyada )))))))))characters askte hain or(hrry) ase osme ha tu match hujaye ga
+    regex = /h.rry/; //matches any one character
+    //  (*)
+    regex = /h*rry/; //matches any 0 or more characters
+    // (?)iska mtlb isse agle character optional hain isswe koi dfarq nahi phta ior hum lkhege ye match hujaye ga agr ? se agla letter os m,e na b huwa tou b match hujaye ga 
+    regex = /ha?rryi?t/; //? after character means that character is optional
+    //(\*) is ko agr hum lgaywe ke tu hum yeh btaye ge hum isko metacharacters ke liye use nahi kr rhe blke isko as it is hum mil lane ke k luiye use kr rhye hain..
+    regex = /h\*rry/ 
+
+    let str = "h*rry means codewith"; // 
+
+    let result = regex.exec(str);
+    console.log("The result from exec is ", result);
+
+    if (regex.test(str)) {
+        console.log(`The string ${str} matches the expression ${regex.source}`);
+    }
+    else {
+        console.log(`The string ${str} does not match the expression ${regex.source}`);
+    }
+
+</script>
+
+</html>
